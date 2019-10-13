@@ -1,0 +1,46 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Product</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css"/>
+    <script src="/webjars/jquery/3.3.1-1/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1 class="h3 mb-3 font-weight-normal">Please Enter Campaign Info</h1>
+
+    <div class="alert alert-danger" role="alert">
+        <h1>Caution</h1>
+        Rules:
+        Campaign applies to category.
+        You must give discount type Rate or Amount.
+    </div>
+
+    <form autocomplete="off" action="#" th:object="${campaign}" method="post">
+
+        <label>Category:</label>
+        <input type="text" id="categoryInfo" th:field="*{categoryInfo}" class="form-control"/><br/>
+
+        <label>Discount Amount:</label>
+        <input type="text" id="discountAmount" th:field="*{discountAmount}" class="form-control"/><br/>
+
+        <label>Product Quantity:</label>
+        <input type="text" id="productQuantity" th:field="*{productQuantity}" class="form-control"/><br/>
+
+        <label>Discount Type:</label>
+        <input type="text" id="type" th:field="*{type}" class="form-control"/><br/>
+
+        <button type="submit" class="btn btn-success text-center form-control">Save</button>
+
+    </form>
+    <div class="margin-top20 text-center">
+        <button type="button" class="btn btn-success"><a th:href="@{/entrance}">Return Entrance</a></button>
+    </div>
+</div>
+</body>
+</html>

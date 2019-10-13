@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ALL DATA</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css"/>
+    <script src="/webjars/jquery/3.3.1-1/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <table class="table table-dark">
+        <thead>
+        <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Price</th>
+            <th scope="col">Category</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="element : ${productList}">
+            <td th:text="${element.getTitle()}"></td>
+            <td th:text="${element.getPrice()}"></td>
+            <td th:text="${element.getCategoryInfo()}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="margin-top20 text-center">
+        <button type="button" class="btn btn-success"><a th:href="@{/entrance}">Entrance</a></button>
+    </div>
+</div>
+</body>
+</html>

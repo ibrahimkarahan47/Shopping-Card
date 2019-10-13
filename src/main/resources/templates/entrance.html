@@ -1,0 +1,39 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Shopping Cart</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css"/>
+    <script src="/webjars/jquery/3.3.1-1/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="alert alert-danger" role="alert">
+        <h1>Welcome to Shopping Cart Platform</h1>
+        Rules:
+        Firstly you should create a category, If there is not any category.
+        After completing the category set up.
+        You can set up product.
+    </div>
+    <div class="margin-top20 text-center">
+        <button type="button" class="btn btn-success"><a th:href="@{category}">Add Category</a></button>
+    </div>
+    <div class="margin-top20 text-center">
+        <button type="button" class="btn btn-success"><a th:href="@{product}">Add Product</a></button>
+    </div>
+    <div class="margin-top20 text-center">
+        <button type="button" class="btn btn-success"><a th:href="@{productList}">See All Product</a></button>
+    </div>
+    <div class="margin-top20 text-center">
+        <button type="button" class="btn btn-success"><a th:href="@{campaign}">Set Campaign</a></button>
+    </div>
+    <div class="margin-top20 text-center">
+        <button type="button" class="btn btn-success"><a th:href="@{shoppingCartItem}">Set Shopping Cart Item</a></button>
+    </div>
+</div>
+</body>
+</html>
